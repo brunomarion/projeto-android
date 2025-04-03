@@ -182,11 +182,16 @@ section img.pequena{
     visibility: hidden
 }
 
+.curiosidades{
+    display: flex;
+    justify-content: center;
+}
+
 aside{
     padding: 0 0 10px 0;
     background-color: #2387267a;
-    margin: auto;
-    max-width: 750px;
+    margin: 20px;
+    max-width: 720px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.436);
 }
@@ -202,15 +207,30 @@ aside h4{
 }
 
 aside p{
-    padding: 8px;
+    padding: 6px;
 }
 
 aside ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     list-style-position: inside;
-    margin-left: 10px;
-    columns: 2;
     list-style-type: '\2714\00A0';/*PARA COLOCAR O CHECK E DAR UM ESPAÇAMENTO ENTRE O SIMBOLO E O TEXTO*/
     font-family: Open Sans;
+}
+
+aside .coluna1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+aside .coluna2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
 }
 
 
