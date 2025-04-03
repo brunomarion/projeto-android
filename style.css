@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+/*IMPORTANDO FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Special+Elite&display=swap');
+
+@font-face {
+    font-family: 'android';
+    src: url('fontes/IDroid.otf') format('opentype');
+}
+
+    
+/*A PSEDOCLASE ROOT É MUM ESPAÇO NO CODIGO CSS PARA A CRIAÇÃO DE VARIÁVEIS, FACILITANDO O USO NO CODIGO*/
+:root{
+    --cor_fundo: #dceb7b87; 
+    --font_destaque: "Bebas Neue", system-ui;
+    --font-padrao: "Open Sans", sans-serif;
+    --font-baixada: "android";
+}
+
+/*PARA CRIAR CONFIGURAÇÕES GLOBAIS DO NOSSO CSS USA-SE O (*), NESSE CASO RETIRANDO TODAS AS MARGINS E PADDINGS DOS NOSSOS ELEMENTOS HTML E ADICIONANDO O SMOOTH NO SCROLL*/
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--cor_fundo);
+}
+
+a.externo::after{
+    content: '\1F517';
+}
+
+.box-header{
+    background-image: linear-gradient(to bottom, #2d9030e7, #124b14e7);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+header h1{
+    font-family: var(--font_destaque);
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+
+}
+
+header p{
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 15px;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4); 
+}
+
+nav{
+    background-color: #124b14e7;
+    padding: 20px;
+    box-shadow: 0 7px 9px rgba(0, 0, 0, 0.312);
+}
+
+nav a{
+    font-family: "Special Elite", system-ui;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #2dad32a9;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+
+article{
+    margin: auto;
+    max-width: 800px;
+    min-width: 320px;
+    background-color: white;
+    box-shadow: 0px 0px 20px #282a1c93;
+    border-radius: 0 0 10px 10px;
+}
+
+article strong{
+    color: #2a8f2d;
+    font-weight: bolder;
+}
+
+article a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #216e23;
+    background-color: #43cb4875;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+article a:hover{
+    text-decoration: underline;
+
+}
+
+article p{
+    text-align: justify;
+    text-indent: 50px;
+    font-family: "Open Sans", sans-serif;
+    margin: 0px 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    line-height: 2em; /*Altura entre as linhas e texto*/
+}
+
+
+section h2{
+    text-align: start;
+    padding: 40px 0 0 20px;
+    color: #124b14e7;
+    font-family: var(--font-baixada);
+    font-size: 28px;
+}
+
+.foto1, .foto2, .foto3, .curiosidades{   /*ScrollReveal*/
+    visibility: hidden;    
+}
+
+section h3{
+    text-align: start;
+    margin: 20px 0 20px 20px;
+    padding: 6px;
+    color: #124b14e7;
+    font-family: var(--font-baixada);
+    font-size: 20px;
+    background-image: linear-gradient(to right, #39f5819e, transparent);
+}
+
+section p{
+    text-align: justify;
+    text-indent: 50px;
+    font-family: "Open Sans", sans-serif;
+    margin: 10px 20px;
+    line-height: 2em; /*Altura entre as linhas e texto*/
+}
+
+img{
+    width: 100%;
+}
+
+section img.pequena{
+    margin: auto; /*PARA CENTRALIZAR A IMAGEM*/
+    display: block; /*COMO IMAGEM NÃO É UM BLOCO, COM O DISPLAY: BLOCK, CONSEGUIMOS CENTRALIZAR A IMAGEM COM MARGIN: AUTO*/
+    width: 60%;
+}
+
+.box-video{
+    background-color: #0c3a0ec5;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 54.3%;
+}
+
+.box-video iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    visibility: hidden
+}
+
+aside{
+    padding: 0 0 10px 0;
+    background-color: #2387267a;
+    margin: auto;
+    max-width: 750px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.436);
+}
+
+aside h4{
+    font-family: "Open Sans", sans-serif;
+    background-color: #0c3a0ec5;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+
+}
+
+aside p{
+    padding: 8px;
+}
+
+aside ul{
+    list-style-position: inside;
+    margin-left: 10px;
+    columns: 2;
+    list-style-type: '\2714\00A0';/*PARA COLOCAR O CHECK E DAR UM ESPAÇAMENTO ENTRE O SIMBOLO E O TEXTO*/
+    font-family: Open Sans;
+}
+
+
+.final-frase{
+    font-family: Open Sans, sans-serif; 
+    text-align: justify; 
+    text-indent: 50px;
+    padding: 30px;
+}
+
+footer p{
+    font-family: Open Sans, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #124b14e7;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #12a017bb;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
