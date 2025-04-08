@@ -65,16 +65,18 @@ header p{
 
 nav{
     background-color: #124b14e7;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 7px 9px rgba(0, 0, 0, 0.312);
+    display: flex;
+    gap: 20px;
 }
 
 nav a{
     font-family: "Special Elite", system-ui;
-    font-size: 1em;
+    font-size: 18px;
     font-weight: bold;
     color: white;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
 }
 
@@ -82,7 +84,7 @@ nav a:hover{
     background-color: #2dad32a9;
     color: black;
     border-radius: 5px;
-    padding: 10px;
+    padding: 8px;
     transition-duration: 0.4s;
 }
 
